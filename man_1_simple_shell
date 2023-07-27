@@ -23,6 +23,8 @@ Always 0 for success, other number means failure.
 
 It will look inside al directions in PATH env variable for executable.
 
+.SH EXAMPLE_
+
 .SH
 
 .SH OPTIONS
@@ -40,4 +42,4 @@ Single space required after argument.
 
 
 .SH AUTHOR
-Mohamed Ibar, Salifu Sadick.
+Mohamed Ibar, Salifu A. Sadick.

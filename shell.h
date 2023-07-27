@@ -1,9 +1,11 @@
 #ifndef _SHELL_H_
+#define _SHELL_H
 #define _SHELL_H_
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdior.h>
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -35,10 +37,11 @@ extern char **environ;
 
 /**
  * struct liststr - singly linked_list
- * @num: number field
+ * @num: no. field
  * @str: string
- * @next: the point to the next node
+ * @next: point to the next node
  */
+
 typedef struct liststr
 {
 	int num;
@@ -48,24 +51,43 @@ typedef struct liststr
 
 /**
  * struct passinfo - contains pseudo-arguements,
+ *
  * allowing uniform prototype
+ *
  * @arg: a string getline containing arguements
+ *
  * @argv:strings generated from arg
+ *
  * @path: current command path
+ *
  * @argc: argument count
+ *
  * @line_count: error count
+ *
  * @err_num: error code for exit()s
+ *
  * @linecount_flag: if on count line of input
+ *
  * @fname: program filename
+ *
  * @env: linked list
+ *
  * @environ: custom modified copy
+ *
  * @history: history node
+ *
  * @alias: alias node
+ *
  * @env_changed: if environ was changed
+ *
  * @status: return status of the last exec'd command
+ *
  * @cmd_buf: address of pointer to cmd_buf,
+ *
  * @cmd_buf_type: CMD_type ||, &&,
+ *
  * @readfd: fd from which to read line input
+ *
  * @histcount: history line number count
  */
 
@@ -99,11 +121,12 @@ info_t;
 
 /**
  * struct builtin - builtin
- * @type: command flag
+ * @type: command the flag
  * @func: function
  *
  * Return: 0
  */
+
 typedef struct builtin
 {
 	char *type;

@@ -29,7 +29,7 @@ int main(int ac, char **av)
 			if (errno == ENOENT)
 			{
 				_eputs(av[0]);
-				_eputs(": 0: Can not open ");
+				_eputs(": 0: it Can not open ");
 				_eputs(av[1]);
 				_eputchar('\n');
 				_eputchar(BUF_FLUSH);

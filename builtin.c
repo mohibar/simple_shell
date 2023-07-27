@@ -20,7 +20,7 @@ int _myexit(info_t *info)
 		if (exitcheck == -1)
 		{
 			info->status = 2;
-			print_error(info, "Illegal number: ");
+			print_error(info, "invalid number: ");
 			_eputs(info->argv[1]);
 			_eputchar('\n');
 			return (1);
@@ -47,7 +47,7 @@ int _mycd(info_t *info)
 
 	s = getcwd(buffer, 1024);
 	if (!s)
-		_puts("TODO: >>getcwd failure emsg here<<\n");
+		_puts("TODO: >>get_cwd failure emsg in here<<\n");
 	if (!info->argv[1])
 	{
 		dir = _getenv(info, "HOME=");
@@ -97,7 +97,7 @@ int _myhelp(info_t *info)
 	char **arg_array;
 
 	arg_array = info->argv;
-	_puts("help call works. Function not yet implemented \n");
+	_puts("help call works. Function has not yet implemented \n");
 	if (0)
 		_puts(*arg_array);
 	return (0);

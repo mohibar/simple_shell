@@ -2,7 +2,7 @@
 #include "shell.h"
 
 /**
- * interactive - return is shell is interactive
+ * interactive - return shell if interactive
  * true
  * @info: addresses
  *
